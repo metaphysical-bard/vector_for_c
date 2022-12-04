@@ -37,8 +37,6 @@ int main() {
 
 	printf("要素(10)を表示します\n");
 	write_print(b);
-	write_print(b);
-
 
 	printf("要素数を15にしました\n");
 	b = resize_vec_M(b, 15);
@@ -67,9 +65,18 @@ int main() {
 	b = delete_vec_M(b, 10);
 	write_print(b);
 
-	printf("値が1の要素をを削除しました\n");
+	printf("値が1の要素を削除しました\n");
 	c = 1;
 	b = erase_vec_M(b, (void*)&c);
+	write_print(b);
+
+	printf("test code\n");
+	for (int i = 0; i < 15; i++) {
+		printf("%d\n", i);
+		c = i;
+		b = set2_vec_M(b, (void*)&c);
+		write_print(b);
+	}
 	write_print(b);
 
 	free_vec_M(b);
