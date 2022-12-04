@@ -43,7 +43,7 @@ int main() {
 	printf("—v‘f”‚ð15‚É‚µ‚Ü‚µ‚½\n");
 	b = resize_vec_M(b, 15);
 	t = b->p;
-	for (int i = 10; i < 15; i++) *(t + i) = i * 2;
+	for (int i = 10; i < 15; i++) *(t + i) = i - 10;
 	write_print(b);
 
 	printf("—v‘f‚Ì––”ö‚É123‚ð’Ç‰Á‚µ‚Ü‚·\n");
@@ -65,6 +65,11 @@ int main() {
 
 	printf("—v‘f‚Ìindex10‚ðíœ‚µ‚Ü‚µ‚½\n");
 	b = delete_vec_M(b, 10);
+	write_print(b);
+
+	printf("’l‚ª1‚Ì—v‘f‚ð‚ðíœ‚µ‚Ü‚µ‚½\n");
+	c = 1;
+	b = erase_vec_M(b, (void*)&c);
 	write_print(b);
 
 	free_vec_M(b);
